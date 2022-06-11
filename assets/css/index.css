@@ -1,0 +1,240 @@
+/* @font-face {
+    font-family: skullFont;
+    src: url(CuteHalloweenDrawings-RpGPv.ttf)
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Volkhov&display=swap');
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* background-image: url(../images/ship1.jpg); */
+    background-size: cover;
+    background-color: #00bbff29;
+    opacity: 907;
+}
+
+/* .background-img {
+    opacity: 0.7;
+} */
+
+h1 {
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    flex-direction: column;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 30px;
+    margin-left: 140px;
+}
+
+.entire-board {
+    background: linear-gradient(270deg, #eecb4b, #d34a56);
+    display: flex;
+    /* display each row vertically */
+    flex-direction: column;
+    padding: 3px;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    margin: 17px;
+}
+
+.row-div {
+    display: flex;
+}
+
+.col-div {
+    background: rgba(255, 255, 255, 0.63);
+    display: flex;
+    height: 65px;
+    margin: 4px;
+    width: 65px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    padding: 1px;
+}
+
+.miss {
+    align-items: center;
+    background-color: #c3c6c787;
+    display: flex;
+    font-size: 40px;
+    /* font-family: 'Blaka Hollow', cursive; */
+    /* font-family: skullFont; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: center;
+}
+
+.gotEm {
+    align-items: center;
+    background-color: #d34a555f;
+    display: flex;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: center;
+}
+
+.game-over {
+    color: #0f5094;
+    display: flex;
+    font-size: 34px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    justify-content: center;
+    padding-top: 35px;
+}
+
+.grid-div {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+}
+
+.letter-box,
+.number-box {
+    align-items: center;
+    border: rgba(255, 255, 255, 0) solid 1px;
+    color: #0f5094;
+    display: flex;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: center;
+    height: 65px;
+    width: 65px;
+}
+
+.letter-div {
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: row;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    margin-left: 20px;
+}
+
+.number-div {
+    background: rgba(255, 255, 255, 0);
+    grid-column-start: 1;
+    grid-row-start: 2;
+    margin-top: 20px;
+}
+
+.letter-box {
+    margin: 4px;
+    transition: transform .7s ease-in-out;
+}
+
+.letter-box:hover {
+    transform: rotate(360deg);
+}
+
+.number-box {
+    margin: 8px;
+    transition: transform .7s ease-in-out;
+}
+
+.number-box:hover {
+    transform: rotate(360deg);
+}
+
+.reset-button,
+.theme-button {
+    background: linear-gradient(277deg, #d34a56, #eecb4b);
+    border: #d34a56 solid 2px;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding: 12px;
+    margin-right: 30px;
+}
+
+#reset-div {
+    margin-left: 120px;
+}
+
+#input-div {
+    display: flex;
+    justify-content: center;
+    margin-left: 120px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 200px;
+}
+
+.input-button {
+    margin-left: 10px;
+    background: linear-gradient(150deg, #d34a56, #eecb4b);
+    border: #d34a56 solid 2px;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#input-text {
+    padding: 5px;
+    font-size: 15px;
+}
+
+.skull-img {
+    transition: transform .7s ease-in-out;
+}
+
+.skull-img:hover {
+    transform: rotate(360deg);
+}
+
+.anya-button {
+    background: linear-gradient(130deg, #9dcabc, #f6bbbe);
+    border-color: #f6bbbe;
+    color: #49373b;
+}
+
+.anya-h1 {
+    color: #49373b;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.anya-img {
+    transition: transform .7s ease-in-out;
+}
+
+.anya-img:hover {
+    transform: rotate(360deg);
+}
+
+.anya-board {
+    background: linear-gradient(270deg, #9dcabc, #f6bbbe);
+}
+
+.anya-input {
+    border-color: #f6bbbe;
+}
+
+.inyu-button {
+    background: linear-gradient(130deg, #968496, #fd000053);
+    border-color: #4C3A4B;
+    color: #49373b;
+}
+
+.inyu-h1 {
+    color: #4C3A4B;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.inyu-img {
+    transition: transform .7s ease-in-out;
+}
+
+.inyu-img:hover {
+    transform: rotate(360deg);
+}
+
+.inyu-board {
+    background: linear-gradient(270deg, #968496, #fd000092);
+}
+
+.inyu-input {
+    border-color: #4C3A4B;
+}
