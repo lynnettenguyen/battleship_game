@@ -14,12 +14,12 @@ const createBoard = (grid) => {
     const spyFamButton = document.createElement("button");
     spyFamButton.innerText = "Spy x Family";
     spyFamButton.className = "theme-button"
-    // spyFamButton.addEventListener("click", changeThemeAnya);
+    spyFamButton.addEventListener("click", changeThemeAnya);
 
-    const demonButton = document.createElement("button");
-    demonButton.innerText = "Inuyasha";
-    demonButton.className = "theme-button"
-    // demonButton.addEventListener("click", changeThemeInyu);
+    const inyuButton = document.createElement("button");
+    inyuButton.innerText = "Inuyasha";
+    inyuButton.className = "theme-button"
+    inyuButton.addEventListener("click", changeThemeInyu);
 
     const gridBox = document.createElement("div");
     gridBox.className = "grid-div"
@@ -86,7 +86,7 @@ const createBoard = (grid) => {
         boardDiv.append(rowDiv);
     }
     document.body.append(resetDiv, gridBox, inputDiv)
-    resetDiv.append(spyFamButton, demonButton, resetButton)
+    resetDiv.append(spyFamButton, inyuButton, resetButton)
     gridBox.append(letterDiv, numberDiv, boardDiv, cornerImg)
     inputDiv.append(inputSpan, inputText, inputButton)
 
@@ -263,7 +263,7 @@ const changeThemeAnya = () => {
 
     const h1 = document.getElementsByTagName("h1")[0]
     h1.classList.add("anya-h1")
-    h1.innerText="BATTLExSHIP"
+    h1.innerText = "BATTLExSHIP"
 
     const entireBoard = document.getElementsByClassName("entire-board")[0];
     entireBoard.classList.add("anya-board")
@@ -317,6 +317,6 @@ console.log(board.grid);
 
 window.onload = () => {
     createBoard(board.grid)
-    document.getElementsByClassName("theme-button")[1].addEventListener("click", changeThemeInyu);
-    document.getElementsByClassName("theme-button")[0].addEventListener("click", changeThemeAnya);
+    // document.getElementsByClassName("theme-button")[1].addEventListener("click", changeThemeInyu);
+    // document.getElementsByClassName("theme-button")[0].addEventListener("click", changeThemeAnya);
 }
